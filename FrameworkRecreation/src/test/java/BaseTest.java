@@ -85,16 +85,16 @@ public class BaseTest {
 
     public void setupDriver(String browserName) {
         if(browserName.equalsIgnoreCase("Chrome")) {
-            //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            WebDriverManager.chromedriver().setup();
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+            //WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox") || browserName.equalsIgnoreCase("mozilla")) {
-            //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
-            WebDriverManager.firefoxdriver().setup();
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
+            //WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         } else {
-            //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
-            WebDriverManager.chromedriver().setup();
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+            //WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         }
     }
