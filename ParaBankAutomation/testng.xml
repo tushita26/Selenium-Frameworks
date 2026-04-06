@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="ParaBank Automation Suite" parallel="test" thread-count="2">
+    <listeners>
+        <listener class-name="org.parabank.base.ExtentTestListener"/>
+    </listeners>
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="testCases.LoginTests"/>
+        </classes>
+    </test>
+    
+    <test name="Dashboard Tests">
+        <classes>
+            <class name="testCases.DashboardTests"/>
+        </classes>
+    </test>
+</suite>
